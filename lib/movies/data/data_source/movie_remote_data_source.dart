@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:movie_app/core/error/exception.dart';
+import 'package:movie_app/core/network/error_message_model.dart';
 import 'package:movie_app/movies/data/models/movie_model.dart';
 
 class MovieRemoteDataSource {
@@ -11,7 +13,9 @@ class MovieRemoteDataSource {
         response.data['results'].map((e) => MovieModel.fromJson(e)).toList(),
       );
     } else {
-      throw Exception('Failed to load movies');
+      throw ServerException(
+        errorMessageModel: ErrorMessageModel.fromJson(response.data),
+      );
     }
   }
 }
