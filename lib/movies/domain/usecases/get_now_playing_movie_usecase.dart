@@ -6,7 +6,7 @@ import 'package:movie_app/movies/domain/repository/base_movie_repository.dart';
 class GetNowPlayingMovieUsecase {
   final BaseMovieRepository baseMovieRepository;
 
-  GetNowPlayingMovieUsecase({required this.baseMovieRepository});
+  GetNowPlayingMovieUsecase(this.baseMovieRepository);
 
   Future<Either<Failure, List<Movie>>> execute() async {
     return await baseMovieRepository.getNowPlayingMovies();
