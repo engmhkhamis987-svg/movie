@@ -7,8 +7,8 @@ import 'package:movie_app/core/network/api_constance.dart';
 import 'package:movie_app/core/utils/dummy.dart';
 import 'package:shimmer/shimmer.dart';
 
-class MoviesScreen extends StatelessWidget {
-  const MoviesScreen({super.key});
+class MovieScreen extends StatelessWidget {
+  const MovieScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
