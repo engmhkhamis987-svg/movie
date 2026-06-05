@@ -15,6 +15,8 @@ class NowPlayingComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MovieBloc, MovieState>(
       builder: (context, state) {
+        print("NowPlayingComponent Build");
+
         switch (state.nowPlayingState) {
           case RequestState.loading:
             return const SizedBox(

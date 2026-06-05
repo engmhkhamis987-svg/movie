@@ -3,7 +3,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_app/core/network/api_constance.dart';
-import 'package:movie_app/core/utils/dummy.dart';
 import 'package:movie_app/core/utils/enums.dart';
 import 'package:movie_app/movies/presentation/controlls/movie_bloc.dart';
 import 'package:movie_app/movies/presentation/controlls/movie_state.dart';
@@ -16,6 +15,8 @@ class PopularComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MovieBloc, MovieState>(
       builder: (BuildContext context, state) {
+        print("PopularComponent Build");
+
         switch (state.popularState) {
           case RequestState.loading:
             return const SizedBox(
