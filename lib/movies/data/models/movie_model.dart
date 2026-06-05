@@ -22,4 +22,16 @@ class MovieModel extends Movie {
       voteAverage: (json['vote_average']).toDouble(),
     );
   }
+
+  Map<String, Object> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'backdrop_path': backdropPath,
+      'genre_ids': genreIds,
+      'overview': overview,
+      'release_date': releaseDate,
+      'vote_average': voteAverage,
+    };
+  }
 }

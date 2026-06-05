@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/core/services/services_locator.dart';
-import 'package:movie_app/movies/presentation/screens/movie_screen.dart';
+import 'package:movie_app/movies/presentation/screens/movie_screen_provider.dart';
 
 void main() {
   ServicesLocator().init();
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       //m
-      home: const MovieScreen(),
+      home: const MovieScreenProvider(),
     );
   }
 }
