@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Movie App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: Colors.grey.shade900,
       ),
-      //m
+
       home: const MovieScreen(),
     );
   }
